@@ -1,0 +1,224 @@
+.topBtn{
+    color: black;
+    border-color: #F71675;
+    background-color: #F71675;
+    font-weight: 600;
+    border-radius: 2rem;
+    width: 100px;
+    height: 60px;
+}
+
+/* bodyの背景は勤怠打刻に影響するので変更する際は注意 */
+body {
+    font-family: "Squada One", sans-serif;
+    background: #000e12;
+    /* #f8f8f8白色もあり */
+    color: #daf6ff;
+  }
+
+
+h1.attendance{
+    margin-bottom: 0;
+}
+
+.greed{
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.attendance-btn{
+    min-height: 400px;
+}
+
+p.footer-text{
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+
+  /* 勤怠打刻のレイアウト */
+  .bluelight-1 {
+    display: table;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .bluelight-2 {
+    display: table;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  .bluelight-1 a {
+    display: table-cell;
+    font-size: 3em;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    transition: background 1s, border-width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), text-shadow 0.5s;
+    color: #f11267;
+    text-shadow: 0 0 20px #ff0bde, 0 0 20px rgba(241, 50, 24, 0);
+    box-shadow: 0 0 0 rgba(241, 50, 24, 0), inset 0 0 0 rgba(241, 50, 24, 0);
+    background-image: radial-gradient(center, ellipse cover, rgba(241, 50, 24, 0) 0%, rgba(241, 50, 24, 0) 90%);
+    border: 0 dotted rgba(241, 50, 24, 0);
+  }
+  .bluelight-2 a {
+    display: table-cell;
+    font-size: 3em;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    transition: background 1s, border-width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), text-shadow 0.5s;
+    color: #daf6ff;
+    text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+    box-shadow: 0 0 0 rgba(10, 175, 230, 0), inset 0 0 0 rgba(10, 175, 230, 0);
+    background-image: radial-gradient(center, ellipse cover, rgba(10, 175, 230, 0) 0%, rgba(10, 175, 230, 0) 90%);
+    border: 0 dotted rgba(10, 175, 230, 0);
+  }
+  
+  
+  .bluelight-1 a:hover {
+    color: #fff;
+    text-shadow: 0 0 50px #ff0bde, 0 0 50px #ff0bde;
+    background-image: radial-gradient(center, ellipse cover, rgba(241, 50, 24, 0) 0%, rgba(241, 50, 24, 0) 60%);
+  }
+  .bluelight-2 a:hover {
+    color: #fff;
+    text-shadow: 0 0 50px #0aafe6, 0 0 50px #0aafe6;
+    background-image: radial-gradient(center, ellipse cover, rgba(10, 175, 230, 0.3) 0%, rgba(10, 175, 230, 0) 60%);
+  }
+  
+  
+  .bluelight-1:before, .bluelight-1:after, .bluelight-1 a:before, .bluelight-1 a:after {
+    transition: 0.2s ease-in-out;
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    border: 60px dashed transparent;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .bluelight-2:before, .bluelight-2:after, .bluelight-2 a:before, .bluelight-2 a:after {
+    transition: 0.2s ease-in-out;
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    border: 60px dashed transparent;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  .bluelight-1:before {
+    animation: rotate 20s linear 0s infinite;
+    width: 180%;
+    height: 180%;
+    border: 3px dotted rgba(241, 50, 24, 0);
+    z-index: -1;
+  }
+  .bluelight-2:before {
+    animation: rotate 20s linear 0s infinite;
+    width: 180%;
+    height: 180%;
+    border: 3px dotted rgba(10, 175, 230, 0);
+    z-index: -1;
+  }
+  
+  
+  .bluelight-1:after {
+    animation: rotate 10s linear 0s infinite reverse;
+    border: 80px dashed rgba(241, 50, 24, 0);
+    width: 160%;
+    height: 160%;
+    z-index: -2;
+  }
+  .bluelight-2:after {
+    animation: rotate 10s linear 0s infinite reverse;
+    border: 80px dashed rgba(10, 175, 230, 0);
+    width: 160%;
+    height: 160%;
+    z-index: -2;
+  }
+  
+  
+  .bluelight-1 a:before {
+    animation: rotate 5s ease-in-out 0s infinite alternate;
+    width: 120%;
+    height: 120%;
+    border: 50px dashed rgba(241, 50, 24, 0);
+  }
+  .bluelight-2 a:before {
+    animation: rotate 5s ease-in-out 0s infinite alternate;
+    width: 120%;
+    height: 120%;
+    border: 50px dashed rgba(10, 175, 230, 0);
+  }
+  
+  
+  .bluelight-1 a:after {
+    animation: rotate 5s linear 0s infinite;
+    border: 18px dashed rgba(241, 50, 24, 0);
+    width: 120%;
+    height: 120%;
+  }
+  .bluelight-2 a:after {
+    animation: rotate 5s linear 0s infinite;
+    border: 18px dashed rgba(10, 175, 230, 0);
+    width: 120%;
+    height: 120%;
+  }
+  
+  
+  .bluelight-1:hover:before {
+    border-color: rgba(241, 50, 24, 0.3);
+  }
+  .bluelight-2:hover:before {
+    border-color: rgba(10, 175, 230, 0.3);
+  }
+  
+  
+  .bluelight-1:hover:after {
+    border-color: rgba(241, 50, 24, 0.1);
+  }
+  .bluelight-2:hover:after {
+    border-color: rgba(10, 175, 230, 0.1);
+  }
+  
+  
+  .bluelight-1:hover a:before {
+    border-color: rgba(241, 50, 24, 0.3);
+  }
+  .bluelight-2:hover a:before {
+    border-color: rgba(10, 175, 230, 0.3);
+  }
+  
+  
+  .bluelight-1:hover a:after {
+    border-color: rgba(241, 50, 24, 0.3);
+  }
+  .bluelight-2:hover a:after {
+    border-color: rgba(10, 175, 230, 0.3);
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
