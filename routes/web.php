@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
+//いけてる？
 
 //TOP画面
 Route::get('/', 'HomeController@index')->name('home.index');
